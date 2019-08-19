@@ -8,7 +8,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  AUTH_SERVER: string = 'http://localhost:3000';
+  AUTH_SERVER: string = 'https://back-petrolitos.herokuapp.com' || 'http://localhost:3000';
   authSubject = new BehaviorSubject(false);
   private token: string;
   constructor(private httpClient: HttpClient) { }
